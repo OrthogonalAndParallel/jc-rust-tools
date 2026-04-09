@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MD5工具 - jc-rust-tools</title>
+    <script type="module" src="/src/main.ts" defer></script>
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>MD5文件加密工具</h1>
+      <p class="description">支持 .sql 和 .groovy 文件，将MD5值写入文件第一行</p>
+
+      <div class="card">
+        <h2>选择文件</h2>
+        <div class="file-info">
+          <p id="file-name">未选择文件</p>
+        </div>
+        <button id="select-file-btn" class="btn-primary">选择文件</button>
+      </div>
+
+      <div class="card">
+        <h2>操作</h2>
+        <div class="button-group">
+          <button id="calculate-btn" class="btn-secondary" disabled>计算MD5</button>
+          <button id="add-md5-btn" class="btn-primary" disabled>添加MD5到文件</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>结果</h2>
+        <div class="result-area">
+          <p id="md5-result">-</p>
+        </div>
+        <button id="copy-btn" class="btn-secondary" disabled>复制MD5</button>
+      </div>
+
+      <div id="status-msg" class="status-msg"></div>
+    </main>
+  </body>
+</html>
